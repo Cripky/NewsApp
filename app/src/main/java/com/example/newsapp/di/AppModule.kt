@@ -18,16 +18,16 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideLocalUserManger(
-        application: Application
-    ): LocalUserManger = LocalUserMangerImpl(application)
+    fun provideLocalUserManger(application: Application): LocalUserManger {
+        return LocalUserMangerImpl(application)
+    }
 
     @Provides
     @Singleton
-    fun provideAppEntryUseCases(
-        localUserManger: LocalUserManger
-    ) = AppEntryUseCases(
-        readAppEntry = ReadAppEntry(localUserManger),
-        saveAppEntry = SaveAppEntry(localUserManger)
-    )
+    fun provideAppEntryUseCases(localUserManger: LocalUserManger): AppEntryUseCases {
+        return AppEntryUseCases(
+            readAppEntry = ReadAppEntry(localUserManger),
+            saveAppEntry = SaveAppEntry(localUserManger)
+        )
+    }
 }
