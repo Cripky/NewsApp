@@ -4,8 +4,9 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.newsapp.domain.model.Article
 
-class NewsPagingSource(
+class SearchNewsPagingSource(
     private val newsApi: NewsApi,
+    private val searchQuery: String,
     private val sources: String
 ): PagingSource<Int, Article>() {
 
@@ -21,7 +22,8 @@ class NewsPagingSource(
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Article> {
         val page = params.key ?: 1
         return try {
-            val newsResponse = newsApi.getNews(
+            val newsResponse = newsApi.searchNews(
+                searchQuery = searchQuery,
                 sources = sources,
                 page = page)
             totalNewsCount += newsResponse.articles.size
@@ -38,5 +40,4 @@ class NewsPagingSource(
             )
         }
     }
-
 }
