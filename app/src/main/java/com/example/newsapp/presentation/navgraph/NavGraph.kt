@@ -38,7 +38,7 @@ fun NavGraph(
         ) {
             composable(route = Route.NewsNavigatorScreen.route) {
                 val viewModel: BookmarkViewModel = hiltViewModel()
-                BookmarkScreen(state = viewModel.state.value, navigate = {})
+                BookmarkScreen(state = viewModel.state.value, navigateToDetails = {})
             }
         }
     }

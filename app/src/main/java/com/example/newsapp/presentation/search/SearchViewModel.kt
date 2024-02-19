@@ -23,7 +23,7 @@ class SearchViewModel @Inject constructor(
                 _state.value = state.value.copy(searchQuery = event.searchQuery)
             }
 
-            SearchEvent.SearchNews -> {
+            is SearchEvent.SearchNews -> {
                 searchNews()
             }
         }
