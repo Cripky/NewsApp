@@ -39,7 +39,7 @@ fun DetailsTopBar(
             navigationIconContentColor = colorResource(id = R.color.body)
         ),
         navigationIcon = {
-            IconButton(onClick = { onBackClick }) {
+            IconButton(onClick = onBackClick) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_back_arrow),
                     contentDescription = null
@@ -47,19 +47,19 @@ fun DetailsTopBar(
             }
         },
         actions = {
-            IconButton(onClick = { onBookmarkClick }) {
+            IconButton(onClick = onBookmarkClick) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_bookmark),
                     contentDescription = null
                 )
             }
-            IconButton(onClick = { onSharedClick }) {
+            IconButton(onClick = onSharedClick) {
                 Icon(
                     imageVector = Icons.Default.Share,
                     contentDescription = null
                 )
             }
-            IconButton(onClick = { onBrowsingClick }) {
+            IconButton(onClick = onBrowsingClick) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_network),
                     contentDescription = null
