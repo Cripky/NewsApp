@@ -42,11 +42,11 @@ class NewsRepositoryImpl(
     }
 
     override suspend fun upsertArticle(article: Article) {
-        newsDao.upsert(article)
+        newsDao.upsertArticle(article)
     }
 
     override suspend fun deleteArticle(article: Article) {
-        newsDao.delete(article)
+        newsDao.deleteArticle(article)
     }
 
     override fun getArticles(): Flow<List<Article>> {

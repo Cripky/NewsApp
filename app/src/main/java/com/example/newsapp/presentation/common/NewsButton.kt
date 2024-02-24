@@ -15,13 +15,14 @@ import com.example.newsapp.ui.theme.WhiteGray
 @Composable
 fun NewsButton(
     text: String,
-    onClick:() -> Unit
+    onClick: () -> Unit
 ) {
-    
+
     Button(
-        onClick = onClick, colors = ButtonDefaults.buttonColors(
-        containerColor = MaterialTheme.colorScheme.primary,
-        contentColor = Color.White
+        onClick = onClick,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = Color.White
         ),
         shape = RoundedCornerShape(size = 6.dp)
     ) {
@@ -36,7 +37,7 @@ fun NewsButton(
 @Composable
 fun NewsTextButton(
     text: String,
-    onClick:() -> Unit
+    onClick: () -> Unit
 ) {
     TextButton(onClick = onClick) {
         Text(

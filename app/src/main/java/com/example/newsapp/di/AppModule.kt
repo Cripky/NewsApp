@@ -17,8 +17,8 @@ import com.example.newsapp.domain.use_cases.news.DeleteArticle
 import com.example.newsapp.domain.use_cases.news.GetNews
 import com.example.newsapp.domain.use_cases.news.NewsUseCases
 import com.example.newsapp.domain.use_cases.news.SearchNews
-import com.example.newsapp.domain.use_cases.news.SelectArticle
-import com.example.newsapp.domain.use_cases.news.SelectArticles
+import com.example.newsapp.domain.use_cases.news.GetArticleByUrl
+import com.example.newsapp.domain.use_cases.news.GetArticles
 import com.example.newsapp.domain.use_cases.news.UpsertArticle
 import com.example.newsapp.util.Constants.BASE_URL
 import com.example.newsapp.util.Constants.NEWS_DATABASE_NAME
@@ -78,8 +78,8 @@ object AppModule {
             searchNews = SearchNews(newsRepository),
             upsertArticle = UpsertArticle(newsRepository),
             deleteArticle = DeleteArticle(newsRepository),
-            selectArticles = SelectArticles(newsRepository),
-            selectArticle = SelectArticle(newsRepository)
+            getArticles = GetArticles(newsRepository),
+            getArticleByUrl = GetArticleByUrl(newsRepository)
         )
     }
 
