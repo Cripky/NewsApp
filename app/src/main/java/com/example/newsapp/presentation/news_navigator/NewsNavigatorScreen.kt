@@ -35,7 +35,7 @@ import com.example.newsapp.presentation.search.SearchScreen
 import com.example.newsapp.presentation.search.SearchViewModel
 
 @Composable
-fun NewsNavigator() {
+fun NewsNavigatorScreen() {
 
     val bottomNavigationItems = remember {
         listOf(

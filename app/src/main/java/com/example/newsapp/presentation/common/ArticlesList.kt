@@ -29,8 +29,8 @@ fun ArticlesList(
         contentPadding = PaddingValues(all = ExtraSmallPadding2)
     ) {
         items(count = articles.size) {
-            val articles = articles[it]
-            ArticleCard(article = articles, onClick = { onClick(articles) })
+            val article = articles[it]
+            ArticleCard(article = article, onClick = { onClick(article) })
         }
 
     }

@@ -6,7 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
-import com.example.newsapp.presentation.news_navigator.NewsNavigator
+import com.example.newsapp.presentation.news_navigator.NewsNavigatorScreen
 import com.example.newsapp.presentation.onboarding.OnBoardingScreen
 import com.example.newsapp.presentation.onboarding.OnBoardingViewModel
 
@@ -35,7 +35,7 @@ fun NavGraph(
             startDestination = Route.NewsNavigatorScreen.route
         ) {
             composable(route = Route.NewsNavigatorScreen.route) {
-                NewsNavigator()
+                NewsNavigatorScreen()
             }
         }
     }
